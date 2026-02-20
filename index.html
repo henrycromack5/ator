@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Cromack - Portfólio Artístico</title>
+    
+    <!-- Ícone do Site (Favicon) -->
+    <link rel="icon" href="https://i.ibb.co/0jL26qYG/icon-black.png" type="image/png">
+    
+    <!-- Tailwind CSS para estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Playfair para títulos artísticos, Inter para leitura limpa) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Phosphor -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f9f9f9',
+                            dark: '#1a1a1a',
+                            accent: '#8b7355' // Um tom elegante e neutro
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Efeito suave de entrada */
+        .fade-in { animation: fadeIn 1s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Ocultar barra de rolagem no lightbox mantendo a funcionalidade */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navegação Simples -->
+    <nav class="fixed w-full bg-brand-light/90 backdrop-blur-md z-40 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-serif text-xl font-semibold tracking-wide">HENRY CROMACK</a>
+            <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+                <a href="#sobre" class="hover:text-brand-accent transition">Sobre</a>
+                <a href="#perfil" class="hover:text-brand-accent transition">Perfil Técnico</a>
+                <a href="#galeria" class="hover:text-brand-accent transition">Galeria</a>
+                <a href="#experiencia" class="hover:text-brand-accent transition">Experiência</a>
+            </div>
+            <!-- Ícones Sociais -->
+            <div class="flex gap-4">
+                <a href="https://www.instagram.com/henrycromack" target="_blank" class="text-gray-600 hover:text-brand-accent transition text-xl"><i class="ph ph-instagram-logo"></i></a>
+                <a href="mailto:cromackhenry@gmail.com" class="text-gray-600 hover:text-brand-accent transition text-xl"><i class="ph ph-envelope-simple"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho / Hero Section -->
+    <header id="sobre" class="pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 fade-in">
+        <!-- Espaço para Foto Principal -->
+        <div class="w-full md:w-1/2">
+            <div class="aspect-[4/5] bg-gray-200 rounded-lg overflow-hidden relative shadow-lg group flex items-center justify-center">
+                <!-- SUBSTITUA O CONTEÚDO DESTA DIV PELA SUA IMAGEM. Exemplo: <img src="sua-foto.jpg" class="object-cover w-full h-full" alt="Foto principal"> -->
+                <span class="text-gray-500 font-serif text-lg tracking-widest">[FOTO PRINCIPAL]</span>
+            </div>
+        </div>
+        
+        <!-- Apresentação e Botão do Vídeo -->
+        <div class="w-full md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-serif text-5xl md:text-6xl mb-4 font-semibold leading-tight">Henry Cromack</h1>
+            <p class="text-brand-accent font-medium tracking-widest uppercase text-sm mb-6">Ator / Diretor / Roteirista</p>
+            
+            <div class="text-gray-600 space-y-4 mb-8 leading-relaxed text-lg">
+                <p>
+                    Comecei minha trajetória como ator aos 12 anos e me formei profissionalmente por meio de cursos de atuação, concluindo meu primeiro aos 14 anos. Ao longo da minha carreira, atuei em teatro, teatro musical, cinema, webséries, séries, curtas-metragens e longas-metragens.
+                </p>
+                <p>
+                    Além da atuação, também dirigi espetáculos teatrais, musicais e produções audiovisuais. Sou apaixonado por dar vida a personagens e pelas histórias que eles carregam. Vejo meu propósito na atuação como um gesto de empatia e troca, capaz de criar conexão e tocar o outro, seja no palco ou na tela.
+                </p>
+            </div>
+
+            <!-- Botão do Videobook -->
+            <div>
+                <a href="[LINK_DO_SEU_VIDEO_AQUI]" target="_blank" class="inline-flex items-center gap-2 bg-brand-dark text-white px-8 py-4 rounded-full font-medium hover:bg-brand-accent transition duration-300 group">
+                    <i class="ph-fill ph-play-circle text-2xl group-hover:scale-110 transition"></i>
+                    Assistir Videobook
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Perfil Técnico -->
+    <section id="perfil" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl mb-12">Perfil Técnico</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Linha 1 -->
+                <div class="border-l border-brand-accent pl-4 text-left">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Idade Aparente</p>
+                    <p class="font-serif text-xl">17 a 27 anos</p>
+                </div>
+                <div class="border-l border-brand-accent pl-4 text-left">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Altura</p>
+                    <p class="font-serif text-xl">1,80 m</p>
+                </div>
+                <div class="border-l border-brand-accent pl-4 text-left">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Manequim / Calça</p>
+                    <p class="font-serif text-xl">P-M / 40-42</p>
+                </div>
+                <div class="border-l border-brand-accent pl-4 text-left">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Calçado</p>
+                    <p class="font-serif text-xl">43</p>
+                </div>
+                
+                <!-- Linha 2 -->
+                <div class="border-l border-brand-accent pl-4 text-left md:col-span-2 mt-4 md:mt-0">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Localização</p>
+                    <p class="font-serif text-xl">São Paulo - SP</p>
+                </div>
+                <div class="border-l border-brand-accent pl-4 text-left md:col-span-2 mt-4 md:mt-0">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Disponibilidade</p>
+                    <p class="font-serif text-xl">Para viagens</p>
+                </div>
+
+                <!-- Linha 3 -->
+                <div class="border-l border-brand-accent pl-4 text-left md:col-span-4 mt-4">
+                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Habilidades & Outras Funções</p>
+                    <p class="font-serif text-lg">Canto (Coral), Direção Audiovisual e Teatral, Roteiro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="py-20 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl mb-12 text-center">Galeria</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Foto 1 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/0yLVq6Lm/fxn-2026-02-15-02531286-DD9-BF4-C5-E4.jpg')">
+                    <img src="https://i.ibb.co/0yLVq6Lm/fxn-2026-02-15-02531286-DD9-BF4-C5-E4.jpg" alt="Henry Cromack - Galeria 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/XZcrGrV6/IMG-2105.jpg')">
+                    <img src="https://i.ibb.co/XZcrGrV6/IMG-2105.jpg" alt="Henry Cromack - Galeria 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/wNQDrWNj/IMG-2399-2.jpg')">
+                    <img src="https://i.ibb.co/wNQDrWNj/IMG-2399-2.jpg" alt="Henry Cromack - Galeria 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/wNsFG54F/IMG-2957.jpg')">
+                    <img src="https://i.ibb.co/wNsFG54F/IMG-2957.jpg" alt="Henry Cromack - Galeria 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/VY0GbH6B/IMG-4858.jpg')">
+                    <img src="https://i.ibb.co/VY0GbH6B/IMG-4858.jpg" alt="Henry Cromack - Galeria 5" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="aspect-[3/4] bg-gray-200 overflow-hidden cursor-pointer relative group" onclick="openLightbox('https://i.ibb.co/BR1PYzF/IMG-7241.jpg')">
+                    <img src="https://i.ibb.co/BR1PYzF/IMG-7241.jpg" alt="Henry Cromack - Galeria 6" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300"></div>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-400 mt-6 italic">Clique nas imagens para ampliar</p>
+        </div>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experiencia" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl mb-12 text-center">Experiência Profissional</h2>
+            
+            <div class="space-y-12">
+                <!-- Categoria: Cinema -->
+                <div>
+                    <h3 class="text-xl font-medium border-b pb-2 mb-6 flex items-center gap-2"><i class="ph ph-film-slate text-brand-accent"></i> Cinema</h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Exame de Rotina</h4>
+                                <p class="text-gray-600">Personagem: Lucas</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2026</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Livrai-nos do mal</h4>
+                                <p class="text-gray-600">Personagem: Pedro</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2026</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">O Bom, o mal e a Prostituta</h4>
+                                <p class="text-gray-600">Personagem: Arnaldo</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2020</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">A Fuga</h4>
+                                <p class="text-gray-600">Personagem: Paulo</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2020</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Game Show</h4>
+                                <p class="text-gray-600">Personagem: Luigi</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">A Mulher Que Sou</h4>
+                                <p class="text-gray-600">Personagem: Bruno / Lívia</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">A Hora da Estrela</h4>
+                                <p class="text-gray-600">Personagens: Raimundo, Olímpico e Cartomante</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Estocolmo (Adaptação)</h4>
+                                <p class="text-gray-600">Personagens: Franco, Isabel e Roque</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Quando Vai Acabar?</h4>
+                                <p class="text-gray-600">Personagem: Lucas</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Fazendo Contato</h4>
+                                <p class="text-gray-600">Personagem: Vinícius / Espírito</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria: Séries -->
+                <div>
+                    <h3 class="text-xl font-medium border-b pb-2 mb-6 flex items-center gap-2"><i class="ph ph-television text-brand-accent"></i> Séries e Webséries</h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Blanchard</h4>
+                                <p class="text-gray-600">Personagem: Theodoro</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2026</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Somos Um Só</h4>
+                                <p class="text-gray-600">Personagem: Louis</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2021</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">DEAD</h4>
+                                <p class="text-gray-600">Personagem: Federico</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2021</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Descontrole</h4>
+                                <p class="text-gray-600">Personagens: Bruno e Kelly</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2020</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">O Enigma da Slime</h4>
+                                <p class="text-gray-600">Personagem: Inácio Silva</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Dual</h4>
+                                <p class="text-gray-600">Atuação</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">O Jogo</h4>
+                                <p class="text-gray-600">Personagem: Vitor</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2017</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria: Teatro -->
+                <div>
+                    <h3 class="text-xl font-medium border-b pb-2 mb-6 flex items-center gap-2"><i class="ph ph-masks-theater text-brand-accent"></i> Teatro & Musicais</h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">As Cartas Que Nunca Enviei</h4>
+                                <p class="text-gray-600">Atuação</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2026 (Em andamento)</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">La Casa de Bernarda Alba</h4>
+                                <p class="text-gray-600">Personagem: Maria Josefa</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Elis de Corpo e Alma (Musical)</h4>
+                                <p class="text-gray-600">Personagem: César Camargo Mariano</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Sempre Juntos</h4>
+                                <p class="text-gray-600">Personagem: Louis</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Sem Saída (Monólogo)</h4>
+                                <p class="text-gray-600">Personagem: Adam</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2019</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Somos Tão Jovens</h4>
+                                <p class="text-gray-600">Personagem: Roni</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Antes da Fama</h4>
+                                <p class="text-gray-600">Personagem: Gabriel Mendes</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2017</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">A Vingança na Ilha da Magia</h4>
+                                <p class="text-gray-600">Personagem: Sebastian Willian</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2017</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Feliz Natal?</h4>
+                                <p class="text-gray-600">Personagem: Paulo</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2016</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Pluft – O Fantasminha</h4>
+                                <p class="text-gray-600">Personagem: Pluft</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2014</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria: Roteiros -->
+                <div>
+                    <h3 class="text-xl font-medium border-b pb-2 mb-6 flex items-center gap-2"><i class="ph ph-pen-nib text-brand-accent"></i> Roteiros</h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Antes da Fama (Peça)</h4>
+                                <p class="text-gray-600">Roteirista</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2017</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Caiu Tem Que Levantar (Websérie)</h4>
+                                <p class="text-gray-600">Roteirista</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2017</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Tô Morta (Peça)</h4>
+                                <p class="text-gray-600">Roteirista</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoria: Formação -->
+                <div>
+                    <h3 class="text-xl font-medium border-b pb-2 mb-6 flex items-center gap-2"><i class="ph ph-graduation-cap text-brand-accent"></i> Formação</h3>
+                    <div class="space-y-6">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Assistente de Professor</h4>
+                                <p class="text-gray-600">Aktoro - Escola de Formação de Atores</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2018 - 2020</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Curso Profissionalizante de Atores (Formado)</h4>
+                                <p class="text-gray-600">Aktoro - Escola de Formação de Atores</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2016 - 2018</span>
+                        </div>
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-baseline gap-1">
+                            <div>
+                                <h4 class="font-serif text-lg font-semibold">Encontro de Corais (Canto)</h4>
+                                <p class="text-gray-600">Colégio Catarinense</p>
+                            </div>
+                            <span class="text-sm text-brand-accent font-medium">2012 - 2014</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-brand-dark text-white py-12 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-2xl mb-6">Vamos trabalhar juntos?</h2>
+            <div class="flex justify-center flex-wrap gap-6 mb-8">
+                <a href="mailto:cromackhenry@gmail.com" class="hover:text-brand-accent transition flex items-center gap-2"><i class="ph ph-envelope-simple text-xl"></i> cromackhenry@gmail.com</a>
+                <a href="https://wa.me/5511962983098" target="_blank" class="hover:text-brand-accent transition flex items-center gap-2"><i class="ph ph-whatsapp-logo text-xl"></i> (11) 96298-3098</a>
+            </div>
+            <p class="text-gray-500 text-sm">© <script>document.write(new Date().getFullYear())</script> Henry Cromack. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal (Para visualizar as fotos em tamanho maior) -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 hidden flex items-center justify-center p-4 backdrop-blur-sm transition-opacity" onclick="closeLightbox(event)">
+        
+        <!-- Botão Fechar -->
+        <button onclick="closeLightbox(event, true)" class="absolute top-6 right-6 text-white hover:text-brand-accent transition p-2">
+            <i class="ph ph-x text-3xl"></i>
+        </button>
+
+        <!-- Container da Imagem Maior -->
+        <div class="max-w-4xl w-full max-h-[90vh] flex justify-center items-center relative" onclick="event.stopPropagation()">
+            <!-- Como ainda não temos as fotos reais, usaremos um bloco temporário grande.
+                 Quando você tiver as URLs das fotos, o JavaScript abaixo cuidará de injetá-las aqui. -->
+            <div id="lightbox-content" class="bg-white w-full max-w-2xl aspect-[3/4] flex items-center justify-center shadow-2xl rounded-sm">
+                <span id="lightbox-placeholder-text" class="text-8xl text-gray-300 font-light"></span>
+                <img id="lightbox-img" src="" alt="Foto Ampliada" class="hidden object-contain max-h-[90vh] w-auto">
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Interatividade -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxContent = document.getElementById('lightbox-content');
+        const lightboxPlaceholder = document.getElementById('lightbox-placeholder-text');
+
+        // Função para abrir o Lightbox
+        function openLightbox(imageIdentifier) {
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Evita rolagem da página por trás
+            
+            // Lógica provisória: Como você ainda vai colocar os links, o código atual 
+            // pega o número (1, 2, 3...) e mostra em grande.
+            // QUANDO VOCÊ TIVER OS LINKS REAIS, altere o HTML acima de "onclick="openLightbox('1')" 
+            // para "onclick="openLightbox('URL_DA_SUA_FOTO.jpg')" e o código abaixo cuidará de exibir a imagem.
+
+            if (imageIdentifier.startsWith('http') || imageIdentifier.includes('.')) {
+                // É um link de imagem real
+                lightboxImg.src = imageIdentifier;
+                lightboxImg.classList.remove('hidden');
+                lightboxPlaceholder.classList.add('hidden');
+                lightboxContent.classList.remove('bg-white', 'aspect-[3/4]', 'w-full'); // Remove fundo branco temporário
+            } else {
+                // É apenas o número temporário
+                lightboxPlaceholder.textContent = imageIdentifier;
+                lightboxImg.classList.add('hidden');
+                lightboxPlaceholder.classList.remove('hidden');
+                lightboxContent.classList.add('bg-white', 'aspect-[3/4]', 'w-full');
+            }
+        }
+
+        // Função para fechar o Lightbox
+        function closeLightbox(event, forceClose = false) {
+            // Fecha se clicou no fundo escuro ou no botão de fechar explicitamente
+            if (forceClose || event.target === lightbox) {
+                lightbox.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Restaura a rolagem
+                lightboxImg.src = ''; // Limpa a imagem
+            }
+        }
+
+        // Fechar com a tecla ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !lightbox.classList.contains('hidden')) {
+                closeLightbox(event, true);
+            }
+        });
+    </script>
+</body>
+</html>
